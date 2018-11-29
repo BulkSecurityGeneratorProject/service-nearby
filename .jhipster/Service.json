@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "users",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "service"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "serviceName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "3",
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "test",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181129202717",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "service",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}
